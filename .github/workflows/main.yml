@@ -5,7 +5,7 @@ name: GITHUB ACITON Weater
 on:
   # 当对分支main进行push操作的时候，这个工作流就被触发了
   push:
-    branches: [ main ]
+    branches: [ master ]
   schedule:
     - cron: 50 22 * * *
 
@@ -31,7 +31,7 @@ jobs:
         run: pip install -r ./config/requirements.txt
         # 运行脚本
       - name: 'Working'
-        env:	#添加环境变量
-          SCKEY: ${{ secrets.SCKEY }}
-          SKEY: ${{ secrets.SKEY }}
+#         env:	#添加环境变量
+#           SCKEY: ${{ secrets.SCKEY }}
+#           SKEY: ${{ secrets.SKEY }}
         run: python ./app.py
