@@ -745,7 +745,7 @@ def delete_index_count_cache(table_name, index_name):
 
     index_prefix = IndexInfo.build_prefix(table_name, index_name)
     cache_key = "table_count:%s:" % index_prefix
-    _cache.delete(cache_key)
+    #_cache.delete(cache_key)
 
 
 def count_table(table_name, use_cache=False):
